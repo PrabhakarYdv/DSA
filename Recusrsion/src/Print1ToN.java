@@ -14,18 +14,16 @@ Expected Auxiliary Space: O(n) (Recursive).
  */
 
 public class Print1ToN {
-    static int count = 1;
-
     public void printNos(int N) {
-        printNumbers(N);
+        printNumbers(1, N);
     }
 
-    public static void printNumbers(int n) {
-        if (count > n) {
+    public static void printNumbers(int i, int n) {
+        if (i > n) {
             return;
         }
-        System.out.print(count + " ");
-        count++;
-        printNumbers(n);
+        System.out.print(i + " ");
+
+        printNumbers(i + 1, n);
     }
 }
