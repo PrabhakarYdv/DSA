@@ -39,4 +39,3 @@ public class sumOfFirstNTerms {
         return (n * n * n) + sum(n - 1);
     }
 }
-}
